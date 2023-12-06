@@ -1,6 +1,6 @@
 --Lenguaje DDL
 
-DROP DATABASE IF EXIST proyectobd;
+DROP DATABASE IF EXISTS proyectobd;
 CREATE DATABASE proyectobd;
 USE proyectoBD;
 
