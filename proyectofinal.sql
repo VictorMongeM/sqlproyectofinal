@@ -71,15 +71,6 @@ CREATE TABLE oferta_academica (
 CREATE TABLE alumno_oferta_academica (
     matricula INT UNSIGNED NOT NULL,
     nrc INT UNSIGNED NOT NULL,
-    calificacion INT UNSIGNED NOT NULL CHECK (calificacion <=10)
-    PRIMARY KEY (matricula, nrc),
-    FOREIGN KEY (matricula) REFERENCES alumno(matricula) ON DELETE RESTRICT ON UPDATE CASCADE,
-    FOREIGN KEY (nrc) REFERENCES oferta_academica(nrc) ON DELETE RESTRICT ON UPDATE CASCADE
-);
-
-CREATE TABLE alumno_oferta_academica (
-    matricula INT UNSIGNED NOT NULL,
-    nrc INT UNSIGNED NOT NULL,
     calificacion INT UNSIGNED NOT NULL CHECK (calificacion <=10),
     PRIMARY KEY (matricula, nrc),
     FOREIGN KEY (matricula) REFERENCES alumno(matricula) ON DELETE RESTRICT ON UPDATE CASCADE,
